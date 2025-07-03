@@ -161,7 +161,7 @@ namespace TooMuchInfo
         { "InfoWatch", new string[] { "INFOWATCH", "707070" } },
         { "BananaPhone", new string[] { "BANANAPHONE", "FFFC45" } },
         { "Vivid", new string[] { "VIVID", "DC143C" } },
-        { "CustomMaterial", new string[] { "CUSTOMCOSMETICS", "FF0000" } },
+        { "CustomMaterial", new string[] { "CUSTOMCOSMETICS", "707070" } },
         { "cheese is gouda", new string[] { "WHOSICHEATING", "707070" } },
         { "I like cheese", new string[] { "RECROOMRIG", "FE8232" } } };
 
