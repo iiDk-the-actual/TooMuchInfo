@@ -97,6 +97,12 @@ namespace TooMuchInfo
         void Start()
         {
             HarmonyPatches.ApplyHarmonyPatches();
+            PhotonNetwork.LocalPlayer.SetCustomProperties(new ExitGames.Client.Photon.Hashtable()
+            {
+                {
+                    PluginInfo.HashKey, PluginInfo.Version
+                }
+            });
         }
 
         static string CheckCosmetics(VRRig rig)

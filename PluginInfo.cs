@@ -7,6 +7,7 @@
     {
         public const string GUID = "com.zlothy.gorillatag.toomuchinfo";
         public const string Name = "TooMuchInfo";
-        public const string Version = "1.0.1";
+        public const string HashKey = "github.com/ZlothY29IQ/TooMuchInfo";
+        public const string Version = "1.0.2";
     }
 }
