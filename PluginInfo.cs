@@ -5,8 +5,8 @@
     /// </summary>
     internal class PluginInfo
     {
-        public const string GUID = "com.goldentrophy.gorillatag.toomuchinfo";
+        public const string GUID = "com.zlothy.gorillatag.toomuchinfo";
         public const string Name = "TooMuchInfo";
-        public const string Version = "1.0.0";
+        public const string Version = "1.0.1";
     }
 }
