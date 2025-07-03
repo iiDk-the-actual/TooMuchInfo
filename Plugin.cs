@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using GorillaNetworking;
 using Photon.Pun;
 using System.IO;
+using System.Linq;
 
 namespace TooMuchInfo
 
@@ -21,6 +22,8 @@ namespace TooMuchInfo
     public class Plugin : BaseUnityPlugin
 
     {
+        static HashSet<string> detectedCheaters = new HashSet<string>();
+
         static Dictionary<string, string> specialPlayers = new Dictionary<string, string>
 {
     { "9DBC90CF7449EF64", "StyledSnail" },
@@ -274,11 +277,9 @@ namespace TooMuchInfo
             if (string.IsNullOrEmpty(rig.concatStringOfCosmeticsAllowed))
                 return 0;
 
-
-            int lengthPerCosmetic = 6;
-
-            return rig.concatStringOfCosmeticsAllowed.Length / lengthPerCosmetic;
+            return rig.concatStringOfCosmeticsAllowed.Count(c => c == '.');
         }
+
 
         static string FormatColor(Color color)
         {
