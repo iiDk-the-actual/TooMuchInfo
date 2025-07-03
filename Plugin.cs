@@ -135,10 +135,13 @@ namespace TooMuchInfo
         {"hgrehngio889584739_hugb", new string[] {"RESURGENCE" , "707070" } },
         {"GTrials", new string[] {"TRIALS","707070" } },
         { "github.com/ZlothY29IQ/GorillaMediaDisplay", new string[] { "GMD", "B103FC" } },
+        { "github.com/ZlothY29IQ/TooMuchInfo", new string[] { "TOOMUCHINFO", "B103FC" } },
+        { "github.com/ZlothY29IQ/RoomUtils-IW", new string[] { "ROOMUTILS-IW", "B103FC" } },
+        { "github.com/ZlothY29IQ/MonkeClick", new string[] { "MONKECLICK", "B103FC" } },
         { "GPronouns", new string[] { "PRONOUNS", "707070" } },
         { "CSVersion", new string[] {"CustomSkin", "707070"} },
         { "ЗлотhРРР", new string[] {"ZlothRRR", "B103FC" } },
-        { "github.com/ZlothY29IQ/Zloth-RecRoomRig", new string[] {"ZlothRRR", "B103FC" } },
+        { "github.com/ZlothY29IQ/Zloth-RecRoomRig", new string[] {"ZLOTH-RRR", "B103FC" } },
         { "ShirtProperties", new string[] { "SHIRTS", "707070" } },
         { "WhoIsThatMonke", new string[] { "WhoIsThatMonke", "707070" } },
         { "GS", new string[] { "OLD SHIRTS", "707070" } },
@@ -158,7 +161,7 @@ namespace TooMuchInfo
         { "InfoWatch", new string[] { "INFOWATCH", "707070" } },
         { "BananaPhone", new string[] { "BANANAPHONE", "FFFC45" } },
         { "Vivid", new string[] { "VIVID", "DC143C" } },
-        { "RGBA", new string[] { "CUSTOMCOSMETICS", "FF0000" } },
+        { "CustomMaterial", new string[] { "CUSTOMCOSMETICS", "FF0000" } },
         { "cheese is gouda", new string[] { "WHOSICHEATING", "707070" } },
         { "I like cheese", new string[] { "RECROOMRIG", "FE8232" } } };
 
