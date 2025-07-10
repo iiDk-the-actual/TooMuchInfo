@@ -11,6 +11,7 @@ using GorillaNetworking;
 using Photon.Pun;
 using System.IO;
 using System.Linq;
+using ExitGames.Client.Photon;
 
 namespace TooMuchInfo
 
@@ -22,8 +23,6 @@ namespace TooMuchInfo
     public class Plugin : BaseUnityPlugin
 
     {
-        static HashSet<string> detectedCheaters = new HashSet<string>();
-
         static Dictionary<string, string> specialPlayers = new Dictionary<string, string>
 {
     { "9DBC90CF7449EF64", "StyledSnail" },
@@ -31,7 +30,7 @@ namespace TooMuchInfo
     { "52529F0635BE0CDF", "PapaSmurf" },
     { "10D31D3BDCCE5B1F", "Deezey" },
     { "BAC5807405123060", "britishmonke" },
-    { "A6FFC7318E1301AF", "jmancurl" },
+    { "A6FFC7318E1301AF", "jmancurly" },
     { "3B9FD2EEF24ACB3", "VMT" },
     { "04005517920EBO", "K9?" },
     { "33FFA45DBFD33B01", "will" },
@@ -76,9 +75,9 @@ namespace TooMuchInfo
     { "571776944B6162F1", "CubCub" },
     { "FB5FCEBC4A0E0387", "PepsiDee" },
     { "645222265FB972B", "Chaotic Asriel" },
-    { "BC99FA914F506AB8", "Lemming 1" },
-    { "3A16560CA65A51DE", "Lemming 2" },
-    { "59F3FE769DE93AB9", "Lemming 3" },
+    { "BC99FA914F506AB8", "Lemming Steam" },
+    { "3A16560CA65A51DE", "Lemming Quest" },
+    { "59F3FE769DE93AB9", "Lemming Unity" },
     { "EE9FB127CF7DBBD5", "NOTMARK" },
     { "54DCB69545BE0800", "Biffbish" },
     { "A04005517920EB0", "K9" },
@@ -92,7 +91,17 @@ namespace TooMuchInfo
     { "B4E45E48C5CE0656", "ZBR" },
     { "A100E9E6C4D91E75", "MYCRAFTS" },
     { "7952F9E08FEF8E83", "MYCRAFTS" },
-    { "10E12F25533C13F2", "KIRPI4" }
+    { "10E12F25533C13F2", "KIRPI4" },
+    { "F8FF7B812B0B2F72", "FOGGY" },
+    { "289C8FAD58A09D6D", "PIXEL" },
+    { "172E4982BEE4A8AD", "H4KPY" },
+    { "A339740A8ED97FC2", "COFFEEPERSON" },
+    { "502575B001FE6FCD", "MIKEYOURMAN" },
+    { "2FB3C7950D2159AF", "CLYDE" },
+    { "378D7E14A11734FF", "ERIK1515" },
+    { "FD39927817389160", "FOOJ" },
+    { "B5F9797560165521", "ZLOTHY QUEST" },
+    { "24EA3CB4A0106203", "ZLOTHY" }
 };
         void Start()
         {
@@ -110,11 +119,12 @@ namespace TooMuchInfo
             string specialties = "";
 
             Dictionary<string, string[]> specialCosmetics = new Dictionary<string, string[]> {
-                { "LBAAD.", new string[] { "ADMIN", "FF0000" } },
-                { "LBAAK.", new string[] { "STICK", "867556" } },
+                { "LBAAD.", new string[] { "ADMIN", "FFFFFF" } },
+                { "LBAAK.", new string[] { "STICK", "964B00" } },
                 { "LBADE.", new string[] { "FINGER PAINTER", "00FF00" } },
                 { "LBAGS.", new string[] { "ILLUSTRATOR", "C76417" } },
-                { "LMAPY.", new string[] { "FIRE STICK", "FF8000" } } };
+                { "LMAQW.", new string[] { "DOUG BOT", "22FCFF" } },
+                { "LMAPY.", new string[] { "FIRE STICK", "D73502" } } };
             foreach (KeyValuePair<string, string[]> specialCosmetic in specialCosmetics)
             {
                 if (rig.concatStringOfCosmeticsAllowed.Contains(specialCosmetic.Key))
@@ -183,6 +193,10 @@ namespace TooMuchInfo
 
             return specialMods == "" ? null : specialMods;
         }
+
+
+        
+
 
         static Dictionary<string, string> datePool = new Dictionary<string, string> { };
         static string CreationDate(VRRig rig)
@@ -379,4 +393,5 @@ namespace TooMuchInfo
             catch { }
         }
     }
+    
 }
