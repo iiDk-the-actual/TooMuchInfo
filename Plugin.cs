@@ -89,6 +89,7 @@ namespace TooMuchInfo
                 { "violetpaiduser", new string[] { "VIOLETPAID", "DF6BFF" } },
                 { "violetfree", new string[] { "VIOLETFREE", "DF6BFF" } },
                 { "obsidianmc", new string[] { "OBSIDIAN.LOL", "303030" } },
+                { "dark", new string[] { "SHIBAGT DARK", "303030" } },
                 { "hidden menu", new string[] { "HIDDEN", "707070" } },
                 { "oblivionuser", new string[] { "OBLIVION", "5055d3" } },
                 { "hgrehngio889584739_hugb\n", new string[] { "RESURGENCE", "470050" } },
@@ -103,7 +104,7 @@ namespace TooMuchInfo
             foreach (KeyValuePair<string, string[]> specialMod in specialModsList)
             {
                 if (customProps.ContainsKey(specialMod.Key.ToLower()))
-                    specialMods += (specialMods == "" ? "" : ", ") + "<color=#" + specialMod.Value[1] + ">" + specialMod.Value[0] + "</color>";
+                    specialMods += (specialMods == "" ? "" : ", ") + "<color=#" + specialMod.Value[1].ToUpper() + ">" + specialMod.Value[0] + "</color>";
             }
 
             CosmeticsController.CosmeticSet cosmeticSet = rig.cosmeticSet;
