@@ -30,7 +30,8 @@ namespace TooMuchInfo
                 { "LBAAK.", new string[] { "FOREST GUIDE", "867556" } }, 
                 { "LBADE.", new string[] { "FINGER PAINTER", "00FF00" } }, 
                 { "LBAGS.", new string[] { "ILLUSTRATOR", "C76417" } },
-                { "LMAPY.", new string[] { "FOREST GUIDE MOD STICK", "FF8000" } } };
+                { "LMAPY.", new string[] { "FOREST GUIDE MOD STICK", "FF8000" } },
+                { "LBANI.", new string[] { "AA CREATOR BADGE", "291447" } } };
             foreach (KeyValuePair<string, string[]> specialCosmetic in specialCosmetics)
             {
                 if (rig.concatStringOfCosmeticsAllowed.Contains(specialCosmetic.Key))
