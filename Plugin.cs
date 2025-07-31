@@ -96,6 +96,7 @@ namespace TooMuchInfo
                 { "eyerock reborn", new string[] { "EYEROCK", "707070" } },
                 { "asteroidlite", new string[] { "ASTEROID LITE", "707070" } },
                 { "elux", new string[] { "ELUX", "707070" } },
+                { "silliness", new string[] { "SILLINESS", "ffbaff" } },
                 { "cokecosmetics", new string[] { "COKE COSMETX", "00ff00" } } };
 
             Dictionary<string, object> customProps = new Dictionary<string, object>();
