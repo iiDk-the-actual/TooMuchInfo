@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using Photon.Realtime;
 using PlayFab.ClientModels;
 using PlayFab;
@@ -42,7 +42,7 @@ namespace TooMuchInfo
     { "AAB44BFD0BA34829", "Boda 2" },
     { "6713DA80D2E9BFB5", "AHauntedArmy" },
     { "B4A3FF01312B55B1", "Pluto" },
-    { "E354E818871BD1D8", "developer9998" },
+    { "E354E818871BD1D8", "dev9998" },
     { "FBE3EE50747CB892", "Lunakitty/Gizmo" },
     { "339E0D392565DC39", "kishark" },
     { "F08CE3118F9E793E", "TurboAlligator" },
@@ -92,6 +92,7 @@ namespace TooMuchInfo
     { "A100E9E6C4D91E75", "MYCRAFTS" },
     { "7952F9E08FEF8E83", "MYCRAFTS" },
     { "10E12F25533C13F2", "KIRPI4" },
+    { "10621E029A675705", "AA_MIKE" },
     { "F8FF7B812B0B2F72", "FOGGY" },
     { "289C8FAD58A09D6D", "PIXEL" },
     { "172E4982BEE4A8AD", "H4KPY" },
@@ -100,8 +101,9 @@ namespace TooMuchInfo
     { "2FB3C7950D2159AF", "CLYDE" },
     { "378D7E14A11734FF", "ERIK1515" },
     { "FD39927817389160", "FOOJ" },
-    { "B5F9797560165521", "ZLOTHY QUEST" },
-    { "24EA3CB4A0106203", "ZLOTHY" }
+    { "B5F9797560165521", "「✦OWNER quest✦」 ~ ♡zlothy♡" },
+    { "24EA3CB4A0106203", "「✦OWNER✦」 ~ ♡zlothy♡" },
+    { "376C2C7C27C0D613", "「✦OWNER✦」 ~ ♡zlothy♡" }
 };
         void Start()
         {
@@ -123,7 +125,6 @@ namespace TooMuchInfo
                 { "LBAAK.", new string[] { "STICK", "964B00" } },
                 { "LBADE.", new string[] { "FINGER PAINTER", "00FF00" } },
                 { "LBAGS.", new string[] { "ILLUSTRATOR", "C76417" } },
-                { "LMAQW.", new string[] { "DOUG BOT", "22FCFF" } },
                 { "LMAPY.", new string[] { "FIRE STICK", "D73502" } } };
             foreach (KeyValuePair<string, string[]> specialCosmetic in specialCosmetics)
             {
@@ -140,22 +141,30 @@ namespace TooMuchInfo
             NetPlayer creator = rig.Creator;
 
             Dictionary<string, string[]> specialModsList = new Dictionary<string, string[]> {
-        {"GFaces", new string[] {"FACES" , "707070"  } },
+        {"GFaces", new string[] {"gFACES" , "707070"  } },
+        {"SimpleBoardsVersion", new string[] {"SIMPLEBOARDS" , "707070"  } },
         {"ObsidianMC", new string[] {"OBSIDIAN" , "DC143C" } },
         {"hgrehngio889584739_hugb", new string[] {"RESURGENCE" , "707070" } },
-        {"GTrials", new string[] {"TRIALS","707070" } },
+        {"GTrials", new string[] {"gTRIALS","707070" } },
         { "github.com/ZlothY29IQ/GorillaMediaDisplay", new string[] { "GMD", "B103FC" } },
         { "github.com/ZlothY29IQ/TooMuchInfo", new string[] { "TOOMUCHINFO", "B103FC" } },
         { "github.com/ZlothY29IQ/RoomUtils-IW", new string[] { "ROOMUTILS-IW", "B103FC" } },
         { "github.com/ZlothY29IQ/MonkeClick", new string[] { "MONKECLICK", "B103FC" } },
-        { "GPronouns", new string[] { "PRONOUNS", "707070" } },
+        { "github.com/ZlothY29IQ/MonkeClick-CI", new string[] { "MONKECLICK-CI", "B103FC" } },
+        { "github.com/ZlothY29IQ/MonkeRealism", new string[] { "MONKEREALISM", "B103FC" } },
+        { "MediaPad", new string[] { "MEDIAPAD", "B103FC" } },
+        { "GorillaCinema", new string[] { "gCINEMA", "B103FC" } },
+        { "GPronouns", new string[] { "gPRONOUNS", "707070" } },
         { "CSVersion", new string[] {"CustomSkin", "707070"} },
-        { "ЗлотhРРР", new string[] {"ZlothRRR", "B103FC" } },
         { "github.com/ZlothY29IQ/Zloth-RecRoomRig", new string[] {"ZLOTH-RRR", "B103FC" } },
-        { "ShirtProperties", new string[] { "SHIRTS", "707070" } },
+        { "ShirtProperties", new string[] { "SHIRTS-OLD", "707070" } },
+        { "GorillaShirts", new string[] { "SHIRTS", "707070" } },
         { "WhoIsThatMonke", new string[] { "WhoIsThatMonke", "707070" } },
         { "GS", new string[] { "OLD SHIRTS", "707070" } },
         { "genesis", new string[] { "GENESIS", "DC143C" } },
+        { "elux", new string[] { "ELUX", "DC143C" } },
+        { "VioletFreeUser", new string[] { "VIOLET FREE", "DC143C" } },
+        { "Hidden Menu", new string[] { "HIDDEN", "DC143C" } },
         { "HP_Left", new string[] { "HOLDABLEPAD", "B103FC" } },
         { "GrateVersion", new string[] { "GRATE", "707070" } },
         { "void", new string[] { "VOID", "DC143C" } },
@@ -167,12 +176,15 @@ namespace TooMuchInfo
         { "ORBIT", new string[] { "ORBIT", "DC143C" } },
         { "Violet On Top", new string[] { "VIOLET", "DC143C" } },
         { "MonkePhone", new string[] { "MONKEPHONE", "7AA11F" } },
+        { "Body Tracking", new string[] { "BODYTRACK-OLD", "7AA11F" } },
+        { "Body Estimation", new string[] { "HANSOLOBodyEst", "7AA11F" } },
+        { "Gorilla Track", new string[] { "BODYTRACK", "7AA11F" } },
         { "GorillaWatch", new string[] { "GORILLAWATCH", "707070" } },
         { "InfoWatch", new string[] { "INFOWATCH", "707070" } },
         { "BananaPhone", new string[] { "BANANAPHONE", "FFFC45" } },
         { "Vivid", new string[] { "VIVID", "DC143C" } },
         { "CustomMaterial", new string[] { "CUSTOMCOSMETICS", "707070" } },
-        { "cheese is gouda", new string[] { "WHOSICHEATING", "707070" } },
+        { "cheese is gouda", new string[] { "WHOISTHATMONKE", "707070" } },
         { "I like cheese", new string[] { "RECROOMRIG", "FE8232" } } };
 
             foreach (KeyValuePair<string, string[]> specialMod in specialModsList)
@@ -258,7 +270,7 @@ namespace TooMuchInfo
             else if (concatStringOfCosmeticsAllowed.Contains("FIRST LOGIN") || rig.Creator.GetPlayerRef().CustomProperties.Count >= 2)
                 return "PC";
 
-            return "QUEST";
+            return "QUEST?";
         }
 
         static void LogUnknownSpecialCosmetic(string userId, string nickname, List<string> cosmeticIds)
@@ -320,17 +332,24 @@ namespace TooMuchInfo
 
                 if (creator != null)
                 {
-                    List<string> lines = new List<string>
-                    {
-                        "",
-                        "",
-                        "",
-                        creator.NickName,
-                        //"ID " + creator.UserId
-                    };
-
                     string specialName = GetSpecialPlayerName(rig);
-                    if (specialName != null) lines.Add($"<color=purple>{specialName}</color>");
+                    string fullName = creator.NickName;
+
+                    if (specialName != null)
+                    {
+                        fullName += $" <color=purple>{specialName}</color>";
+                    }
+
+                    List<string> lines = new List<string>
+            {
+                "",
+                "",
+                "",
+                fullName,
+                // "ID " + creator.UserId
+            };
+
+                    
 
                     string cosmetics = CheckCosmetics(rig);
                     if (cosmetics != null)
