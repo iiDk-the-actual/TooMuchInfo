@@ -99,11 +99,14 @@ namespace TooMuchInfo
     { "A339740A8ED97FC2", "COFFEEPERSON" },
     { "502575B001FE6FCD", "MIKEYOURMAN" },
     { "2FB3C7950D2159AF", "CLYDE" },
+    { "8FB9FEC5DBBA0C79", "GOOPER" },
     { "378D7E14A11734FF", "ERIK1515" },
     { "FD39927817389160", "FOOJ" },
-    { "B5F9797560165521", "「✦OWNER quest✦」 ~ ♡zlothy♡" },
-    { "24EA3CB4A0106203", "「✦OWNER✦」 ~ ♡zlothy♡" },
-    { "376C2C7C27C0D613", "「✦OWNER✦」 ~ ♡zlothy♡" }
+    { "B5F9797560165521", "OWNER quest" },
+    { "24EA3CB4A0106203", "OWNER" },
+    { "376C2C7C27C0D613", "OWNER" },
+    { "1CBFB96AC67DED4F", "BADKARMA" }
+   
 };
         void Start()
         {
@@ -159,7 +162,6 @@ namespace TooMuchInfo
         { "github.com/ZlothY29IQ/Zloth-RecRoomRig", new string[] {"ZLOTH-RRR", "B103FC" } },
         { "ShirtProperties", new string[] { "SHIRTS-OLD", "707070" } },
         { "GorillaShirts", new string[] { "SHIRTS", "707070" } },
-        { "WhoIsThatMonke", new string[] { "WhoIsThatMonke", "707070" } },
         { "GS", new string[] { "OLD SHIRTS", "707070" } },
         { "genesis", new string[] { "GENESIS", "DC143C" } },
         { "elux", new string[] { "ELUX", "DC143C" } },
@@ -337,20 +339,22 @@ namespace TooMuchInfo
 
                     if (specialName != null)
                     {
-                        fullName += $" <color=purple>{specialName}</color>";
+                        fullName = fullName + $" <color=purple>{specialName}</color>";
                     }
 
-                    List<string> lines = new List<string>
-            {
-                "",
-                "",
-                "",
-                fullName,
-                // "ID " + creator.UserId
-            };
+                    string modscount = CheckMods(rig);
+                    List<string> lines = new List<string>();
 
                     
+                        if (modscount != null)
+                        if (modscount != null)
+                            lines.Add(""); //more space lol
 
+                    lines.Add("");  
+                    lines.Add(""); 
+                    lines.Add("");  
+                    lines.Add(fullName); 
+                                                         
                     string cosmetics = CheckCosmetics(rig);
                     if (cosmetics != null)
                     {
@@ -397,7 +401,8 @@ namespace TooMuchInfo
                     int totalCosmetics = CountTotalCosmetics(rig);
                     if (totalCosmetics > 0)
                     {
-                        lines.Add("Cosmetics: " + totalCosmetics.ToString());
+                        //lines.Add("Cosmetics: " + totalCosmetics.ToString());
+                        //Not accurate anyways and takes up space.
                     }
 
 
