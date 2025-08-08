@@ -43,6 +43,7 @@ namespace TooMuchInfo
     { "6713DA80D2E9BFB5", "AHauntedArmy" },
     { "B4A3FF01312B55B1", "Pluto" },
     { "E354E818871BD1D8", "dev9998" },
+    { "F37C42AE22744DBA", "[G.r.a.z.e]" },
     { "FBE3EE50747CB892", "Lunakitty/Gizmo" },
     { "339E0D392565DC39", "kishark" },
     { "F08CE3118F9E793E", "TurboAlligator" },
@@ -66,7 +67,7 @@ namespace TooMuchInfo
     { "498D4C2F23853B37", "POGTROLL" },
     { "BC9764E1EADF8BE0", "Circuit" },
     { "D0CB396539676DD8", "FrogIlla" },
-    { "A1A99D33645E4A94", "STEAMVRAVTS / YEAT" },
+    { "A1A99D33645E4A94", "STEAMVRAVTS/YEAT" },
     { "CA8FDFF42B7A1836", "Brokenstone" },
     { "CBCCBBB6C28A94CF", "PTMstar" },
     { "6DC06EEFFE9DBD39", "Lucio" },
@@ -89,23 +90,24 @@ namespace TooMuchInfo
     { "8FECBBC89D69575E", "KyleTheScientist" },
     { "4D5EB238C8253D04", "Person" },
     { "B4E45E48C5CE0656", "ZBR" },
+    { "8A062E735BBC89ED", "GLTCH" },
     { "A100E9E6C4D91E75", "MYCRAFTS" },
     { "7952F9E08FEF8E83", "MYCRAFTS" },
     { "10E12F25533C13F2", "KIRPI4" },
     { "10621E029A675705", "AA_MIKE" },
     { "F8FF7B812B0B2F72", "FOGGY" },
+    { "1E8298E1E1F40CB2", "FAADU" },
     { "289C8FAD58A09D6D", "PIXEL" },
     { "172E4982BEE4A8AD", "H4KPY" },
     { "A339740A8ED97FC2", "COFFEEPERSON" },
     { "502575B001FE6FCD", "MIKEYOURMAN" },
     { "2FB3C7950D2159AF", "CLYDE" },
-    { "8FB9FEC5DBBA0C79", "GOOPER" },
     { "378D7E14A11734FF", "ERIK1515" },
     { "FD39927817389160", "FOOJ" },
-    { "B5F9797560165521", "OWNER quest" },
-    { "24EA3CB4A0106203", "OWNER" },
+    { "B5F9797560165521", "OWNER" }, //quest acc
+    { "24EA3CB4A0106203", "OWNER" }, 
     { "376C2C7C27C0D613", "OWNER" },
-    { "1CBFB96AC67DED4F", "BADKARMA" }
+    { "96A75B23C8BBB4C9", "OWNER" } //main acc
    
 };
         void Start()
@@ -127,6 +129,7 @@ namespace TooMuchInfo
                 { "LBAAD.", new string[] { "ADMIN", "FFFFFF" } },
                 { "LBAAK.", new string[] { "STICK", "964B00" } },
                 { "LBADE.", new string[] { "FINGER PAINTER", "00FF00" } },
+                { "LBANI.", new string[] { "AA CREATOR", "40E0D0" } },
                 { "LBAGS.", new string[] { "ILLUSTRATOR", "C76417" } },
                 { "LMAPY.", new string[] { "FIRE STICK", "D73502" } } };
             foreach (KeyValuePair<string, string[]> specialCosmetic in specialCosmetics)
@@ -145,7 +148,7 @@ namespace TooMuchInfo
 
             Dictionary<string, string[]> specialModsList = new Dictionary<string, string[]> {
         {"GFaces", new string[] {"gFACES" , "707070"  } },
-        {"SimpleBoardsVersion", new string[] {"SIMPLEBOARDS" , "707070"  } },
+        {"github.com/maroon-shadow/SimpleBoards", new string[] {"SIMPLEBOARDS" , "707070"  } },
         {"ObsidianMC", new string[] {"OBSIDIAN" , "DC143C" } },
         {"hgrehngio889584739_hugb", new string[] {"RESURGENCE" , "707070" } },
         {"GTrials", new string[] {"gTRIALS","707070" } },
@@ -157,6 +160,7 @@ namespace TooMuchInfo
         { "github.com/ZlothY29IQ/MonkeRealism", new string[] { "MONKEREALISM", "B103FC" } },
         { "MediaPad", new string[] { "MEDIAPAD", "B103FC" } },
         { "GorillaCinema", new string[] { "gCINEMA", "B103FC" } },
+        { "ChainedTogetherActive", new string[] { "CHAINEDTOGETHER", "B103FC" } },
         { "GPronouns", new string[] { "gPRONOUNS", "707070" } },
         { "CSVersion", new string[] {"CustomSkin", "707070"} },
         { "github.com/ZlothY29IQ/Zloth-RecRoomRig", new string[] {"ZLOTH-RRR", "B103FC" } },
@@ -165,7 +169,7 @@ namespace TooMuchInfo
         { "GS", new string[] { "OLD SHIRTS", "707070" } },
         { "genesis", new string[] { "GENESIS", "DC143C" } },
         { "elux", new string[] { "ELUX", "DC143C" } },
-        { "VioletFreeUser", new string[] { "VIOLET FREE", "DC143C" } },
+        { "VioletFreeUser", new string[] { "VIOLETFREE", "DC143C" } },
         { "Hidden Menu", new string[] { "HIDDEN", "DC143C" } },
         { "HP_Left", new string[] { "HOLDABLEPAD", "B103FC" } },
         { "GrateVersion", new string[] { "GRATE", "707070" } },
@@ -179,7 +183,7 @@ namespace TooMuchInfo
         { "Violet On Top", new string[] { "VIOLET", "DC143C" } },
         { "MonkePhone", new string[] { "MONKEPHONE", "7AA11F" } },
         { "Body Tracking", new string[] { "BODYTRACK-OLD", "7AA11F" } },
-        { "Body Estimation", new string[] { "HANSOLOBodyEst", "7AA11F" } },
+        { "Body Estimation", new string[] { "HANBodyEst", "7AA11F" } },
         { "Gorilla Track", new string[] { "BODYTRACK", "7AA11F" } },
         { "GorillaWatch", new string[] { "GORILLAWATCH", "707070" } },
         { "InfoWatch", new string[] { "INFOWATCH", "707070" } },
@@ -224,7 +228,7 @@ namespace TooMuchInfo
                 datePool.Add(UserId, "LOADING");
                 PlayFabClientAPI.GetAccountInfo(new GetAccountInfoRequest { PlayFabId = UserId }, delegate (GetAccountInfoResult result)
                 {
-                    string date = result.AccountInfo.Created.ToString("MMM dd, yyyy HH:mm").ToUpper();
+                    string date = result.AccountInfo.Created.ToString("MMM dd, yyyy").ToUpper();
                     datePool[UserId] = date;
                     rig.UpdateName();
                 }, delegate { datePool[UserId] = "ERROR"; rig.UpdateName(); }, null, null);
@@ -361,7 +365,7 @@ namespace TooMuchInfo
                         lines.Add(cosmetics);
 
                         List<string> foundSpecialCosmetics = new List<string>();
-                        string[] specialPrefixes = new string[] { "LBADE.", "LBAAK.", "LBAAD.", "LBAGS.", "LMAPY." };
+                        string[] specialPrefixes = new string[] { "LBADE.", "LBAAK.", "LBAAD.", "LBAGS.", "LMAPY.", "LBANI" };
 
                         foreach (string prefix in specialPrefixes)
                         {
