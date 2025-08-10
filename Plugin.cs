@@ -160,6 +160,7 @@ namespace TooMuchInfo
         { "github.com/ZlothY29IQ/MonkeRealism", new string[] { "MONKEREALISM", "B103FC" } },
         { "MediaPad", new string[] { "MEDIAPAD", "B103FC" } },
         { "GorillaCinema", new string[] { "gCINEMA", "B103FC" } },
+        { "FPS-Nametags for Zlothy", new string[] { "FPSTags", "B103FC" } },
         { "ChainedTogetherActive", new string[] { "CHAINEDTOGETHER", "B103FC" } },
         { "GPronouns", new string[] { "gPRONOUNS", "707070" } },
         { "CSVersion", new string[] {"CustomSkin", "707070"} },
