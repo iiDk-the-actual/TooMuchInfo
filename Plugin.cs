@@ -150,7 +150,7 @@ namespace TooMuchInfo
         {"GFaces", new string[] {"gFACES" , "707070"  } },
         {"github.com/maroon-shadow/SimpleBoards", new string[] {"SIMPLEBOARDS" , "707070"  } },
         {"ObsidianMC", new string[] {"OBSIDIAN" , "DC143C" } },
-        {"hgrehngio889584739_hugb", new string[] {"RESURGENCE" , "707070" } },
+        {"hswaijfsgwyyiug_jgrjuheh+ji4rebjgferhj.rhgiuv,giheru405898-gjfdhbbdf___rihgwiughewufg", new string[] {"RESURGENCE" , "707070" } },
         {"GTrials", new string[] {"gTRIALS","707070" } },
         { "github.com/ZlothY29IQ/GorillaMediaDisplay", new string[] { "GMD", "B103FC" } },
         { "github.com/ZlothY29IQ/TooMuchInfo", new string[] { "TOOMUCHINFO", "B103FC" } },
