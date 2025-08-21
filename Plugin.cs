@@ -46,23 +46,24 @@ namespace TooMuchInfo
             string specialMods = "";
             NetPlayer creator = rig.Creator;
 
-            Dictionary<string, string[]> specialModsList = new Dictionary<string, string[]> { 
+            Dictionary<string, string[]> specialModsList = new Dictionary<string, string[]> {
                 { "genesis", new string[] { "GENESIS", "07019C" } },
                 { "HP_Left", new string[] { "HOLDABLEPAD", "332316" } },
                 { "GrateVersion", new string[] { "GRATE", "707070" } },
-                { "void", new string[] { "VOID", "FFFFFF" } }, 
-                { "BANANAOS", new string[] { "BANANAOS", "FFFF00" } }, 
-                { "GC", new string[] { "GORILLACRAFT", "43B581" } }, 
-                { "CarName", new string[] { "GORILLAVEHICLES", "43B581" } }, 
-                { "6p72ly3j85pau2g9mda6ib8px", new string[] { "CCMV2", "BF00FC" } }, 
-                { "cronos", new string[] { "CRONOS", "0000FF" } }, 
-                { "ORBIT", new string[] { "ORBIT", "FFFFFF" } }, 
-                { "Violet On Top", new string[] { "VIOLET", "DF6BFF" } }, 
-                { "MP25", new string[] { "MONKEPHONE", "707070" } }, 
-                { "GorillaWatch", new string[] { "GORILLAWATCH", "707070" } }, 
-                { "InfoWatch", new string[] { "GORILLAINFOWATCH", "707070" } }, 
-                { "BananaPhone", new string[] { "BANANAPHONE", "FFFC45" } }, 
-                { "Vivid", new string[] { "VIVID", "F000BC" } }, 
+                { "void", new string[] { "VOID", "FFFFFF" } },
+                { "BANANAOS", new string[] { "BANANAOS", "FFFF00" } },
+                { "GC", new string[] { "GORILLACRAFT", "43B581" } },
+                { "CarName", new string[] { "GORILLAVEHICLES", "43B581" } },
+                { "6p72ly3j85pau2g9mda6ib8px", new string[] { "CCMV2", "BF00FC" } },
+                { "FPS-Nametags for Zlothy", new string[] { "FPSTAGS", "B103FC" } },
+                { "cronos", new string[] { "CRONOS", "0000FF" } },
+                { "ORBIT", new string[] { "ORBIT", "FFFFFF" } },
+                { "Violet On Top", new string[] { "VIOLET", "DF6BFF" } },
+                { "MP25", new string[] { "MONKEPHONE", "707070" } },
+                { "GorillaWatch", new string[] { "GORILLAWATCH", "707070" } },
+                { "InfoWatch", new string[] { "GORILLAINFOWATCH", "707070" } },
+                { "BananaPhone", new string[] { "BANANAPHONE", "FFFC45" } },
+                { "Vivid", new string[] { "VIVID", "F000BC" } },
                 { "RGBA", new string[] { "CUSTOMCOSMETICS", "FF0000" } },
                 { "cheese is gouda", new string[] { "WHOSICHEATING", "707070" } },
                 { "shirtversion", new string[] { "GORILLASHIRTS", "707070" } },
@@ -96,7 +97,34 @@ namespace TooMuchInfo
                 { "eyerock reborn", new string[] { "EYEROCK", "707070" } },
                 { "asteroidlite", new string[] { "ASTEROID LITE", "707070" } },
                 { "elux", new string[] { "ELUX", "707070" } },
-                { "cokecosmetics", new string[] { "COKE COSMETX", "00ff00" } } };
+                { "cokecosmetics", new string[] { "COKE COSMETX", "00ff00" } },
+                { "GFaces", new string[] { "gFACES", "707070" } },
+                { "github.com/maroon-shadow/SimpleBoards", new string[] { "SIMPLEBOARDS", "707070" } },
+                { "ObsidianMC", new string[] { "OBSIDIAN", "DC143C" } },
+                { "hgrehngio889584739_hugb", new string[] { "RESURGENCE", "707070" } },
+                { "GTrials", new string[] { "gTRIALS", "707070" } },
+                { "github.com/ZlothY29IQ/GorillaMediaDisplay", new string[] { "GMD", "B103FC" } },
+                { "github.com/ZlothY29IQ/TooMuchInfo", new string[] { "TOOMUCHINFO", "B103FC" } },
+                { "github.com/ZlothY29IQ/RoomUtils-IW", new string[] { "ROOMUTILS-IW", "B103FC" } },
+                { "github.com/ZlothY29IQ/MonkeClick", new string[] { "MONKECLICK", "B103FC" } },
+                { "github.com/ZlothY29IQ/MonkeClick-CI", new string[] { "MONKECLICK-CI", "B103FC" } },
+                { "github.com/ZlothY29IQ/MonkeRealism", new string[] { "MONKEREALISM", "B103FC" } },
+                { "MediaPad", new string[] { "MEDIAPAD", "B103FC" } },
+                { "GorillaCinema", new string[] { "gCINEMA", "B103FC" } },
+                { "ChainedTogetherActive", new string[] { "CHAINEDTOGETHER", "B103FC" } },
+                { "GPronouns", new string[] { "gPRONOUNS", "707070" } },
+                { "CSVersion", new string[] { "CustomSkin", "707070" } },
+                { "github.com/ZlothY29IQ/Zloth-RecRoomRig", new string[] { "ZLOTH-RRR", "B103FC" } },
+                { "ShirtProperties", new string[] { "SHIRTS-OLD", "707070" } },
+                { "GorillaShirts", new string[] { "SHIRTS", "707070" } },
+                { "GS", new string[] { "OLD SHIRTS", "707070" } },
+                { "6XpyykmrCthKhFeUfkYGxv7xnXpoe2", new string[] { "CCMV2", "DC143C" } },
+                { "Body Tracking", new string[] { "BODYTRACK-OLD", "7AA11F" } },
+                { "Body Estimation", new string[] { "HANBodyEst", "7AA11F" } },
+                { "Gorilla Track", new string[] { "BODYTRACK", "7AA11F" } },
+                { "CustomMaterial", new string[] { "CUSTOMCOSMETICS", "707070" } },
+                { "I like cheese", new string[] { "RECROOMRIG", "FE8232" } }
+            };
 
             Dictionary<string, object> customProps = new Dictionary<string, object>();
             foreach (DictionaryEntry dictionaryEntry in creator.GetPlayerRef().CustomProperties)
@@ -105,7 +133,7 @@ namespace TooMuchInfo
             foreach (KeyValuePair<string, string[]> specialMod in specialModsList)
             {
                 if (customProps.ContainsKey(specialMod.Key.ToLower()))
-                    specialMods += (specialMods == "" ? "" : ", ") + "<color=#" + specialMod.Value[1].ToUpper() + ">" + specialMod.Value[0] + "</color>";
+                    specialMods += (specialMods == "" ? "" : ", ") + "<color=#" + specialMod.Value[1].ToUpper() + ">" + specialMod.Value[0].ToUpper() + "</color>";
             }
 
             CosmeticsController.CosmeticSet cosmeticSet = rig.cosmeticSet;
