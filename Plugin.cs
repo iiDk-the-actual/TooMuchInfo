@@ -123,7 +123,8 @@ namespace TooMuchInfo
                 { "Body Estimation", new string[] { "HANBodyEst", "7AA11F" } },
                 { "Gorilla Track", new string[] { "BODYTRACK", "7AA11F" } },
                 { "CustomMaterial", new string[] { "CUSTOMCOSMETICS", "707070" } },
-                { "I like cheese", new string[] { "RECROOMRIG", "FE8232" } }
+                { "I like cheese", new string[] { "RECROOMRIG", "FE8232" } },
+                { "silliness", new string[] { "SILLINESS", "FFBAFF" } },
             };
 
             Dictionary<string, object> customProps = new Dictionary<string, object>();
