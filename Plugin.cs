@@ -44,7 +44,8 @@ namespace TooMuchInfo
     { "B4A3FF01312B55B1", "Pluto" },
     { "E354E818871BD1D8", "dev9998" },
     { "F37C42AE22744DBA", "[G.r.a.z.e]" },
-    { "FBE3EE50747CB892", "Lunakitty/Gizmo" },
+    { "42D7D32651E93866", "Graze" },
+    { "FBE3EE50747CB892", "Gizmo" },
     { "339E0D392565DC39", "kishark" },
     { "F08CE3118F9E793E", "TurboAlligator" },
     { "D6E20BE9655C798", "TTTPIG 1" },
@@ -102,14 +103,26 @@ namespace TooMuchInfo
     { "A339740A8ED97FC2", "COFFEEPERSON" },
     { "502575B001FE6FCD", "MIKEYOURMAN" },
     { "2FB3C7950D2159AF", "CLYDE" },
+    { "8FB9FEC5DBBA0C79", "GOOPER" },
     { "378D7E14A11734FF", "ERIK1515" },
     { "FD39927817389160", "FOOJ" },
-    { "B5F9797560165521", "OWNER" }, //quest acc
-    { "24EA3CB4A0106203", "OWNER" }, 
-    { "376C2C7C27C0D613", "OWNER" },
-    { "96A75B23C8BBB4C9", "OWNER" } //main acc
+    { "A48744B93D9A3596", "HanSolo" },
+    { "B1B20DEEEDB71C63", "MonkY" },
+    { "C41A1A9055417A27", "Ariel" },
+    { "9ABD0C174289F58E", "baggZ" },
+    { "B5F9797560165521", "ZlothY" },
+    { "24EA3CB4A0106203", "ZlothY" }, 
+    { "376C2C7C27C0D613", "ZlothY" },
+    { "96A75B23C8BBB4C9", "ZlothY" }
+    
    
 };
+
+        static HashSet<string> blacklisted = new HashSet<string>
+        {
+            "91FA95E83DC36233" //[0SUNVR14K] spoofs every property
+        };
+
         void Start()
         {
             HarmonyPatches.ApplyHarmonyPatches();
@@ -148,27 +161,33 @@ namespace TooMuchInfo
 
             Dictionary<string, string[]> specialModsList = new Dictionary<string, string[]> {
         {"GFaces", new string[] {"gFACES" , "707070"  } },
+        {"DeeTags", new string[] {"DEE TAGS" , "707070"  } },
+        {"Boy Do I Love Information", new string[] {"BDIL INFO" , "707070"  } },
+        {"NametagsPlusPlus", new string[] {"NAMETAGS++" , "707070"  } },
+        {"kingbingus.oculusreportmenu", new string[] {"OCULUS REPORT MENU" , "707070"  } },
         {"github.com/maroon-shadow/SimpleBoards", new string[] {"SIMPLEBOARDS" , "707070"  } },
         {"ObsidianMC", new string[] {"OBSIDIAN" , "DC143C" } },
-        {"hswaijfsgwyyiug_jgrjuheh+ji4rebjgferhj.rhgiuv,giheru405898-gjfdhbbdf___rihgwiughewufg", new string[] {"RESURGENCE" , "707070" } },
+        {"hgrehngio889584739_hugb", new string[] {"RESURGENCE" , "707070" } },
         {"GTrials", new string[] {"gTRIALS","707070" } },
-        { "github.com/ZlothY29IQ/GorillaMediaDisplay", new string[] { "GMD", "B103FC" } },
+        { "github.com/ZlothY29IQ/GorillaMediaDisplay", new string[] { "gMEDIA DISPLAY", "B103FC" } },
         { "github.com/ZlothY29IQ/TooMuchInfo", new string[] { "TOOMUCHINFO", "B103FC" } },
         { "github.com/ZlothY29IQ/RoomUtils-IW", new string[] { "ROOMUTILS-IW", "B103FC" } },
         { "github.com/ZlothY29IQ/MonkeClick", new string[] { "MONKECLICK", "B103FC" } },
         { "github.com/ZlothY29IQ/MonkeClick-CI", new string[] { "MONKECLICK-CI", "B103FC" } },
         { "github.com/ZlothY29IQ/MonkeRealism", new string[] { "MONKEREALISM", "B103FC" } },
+        { "WalkSimulator", new string[] { "WALKSIM ZLOTHY", "B103FC" } },
+        { "Dingus", new string[] { "DINGUS", "B103FC" } },
         { "MediaPad", new string[] { "MEDIAPAD", "B103FC" } },
         { "GorillaCinema", new string[] { "gCINEMA", "B103FC" } },
-        { "FPS-Nametags for Zlothy", new string[] { "FPSTags", "B103FC" } },
         { "ChainedTogetherActive", new string[] { "CHAINEDTOGETHER", "B103FC" } },
         { "GPronouns", new string[] { "gPRONOUNS", "707070" } },
         { "CSVersion", new string[] {"CustomSkin", "707070"} },
-        { "github.com/ZlothY29IQ/Zloth-RecRoomRig", new string[] {"ZLOTH-RRR", "B103FC" } },
+        { "github.com/ZlothY29IQ/Zloth-RecRoomRig", new string[] {"ZLOTHYBodyEst", "B103FC" } },
         { "ShirtProperties", new string[] { "SHIRTS-OLD", "707070" } },
         { "GorillaShirts", new string[] { "SHIRTS", "707070" } },
         { "GS", new string[] { "OLD SHIRTS", "707070" } },
         { "genesis", new string[] { "GENESIS", "DC143C" } },
+        { "ElixirMenu", new string[] { "ELIXIR", "DC143C" } },
         { "elux", new string[] { "ELUX", "DC143C" } },
         { "VioletFreeUser", new string[] { "VIOLETFREE", "DC143C" } },
         { "Hidden Menu", new string[] { "HIDDEN", "DC143C" } },
@@ -182,10 +201,12 @@ namespace TooMuchInfo
         { "cronos", new string[] { "CRONOS", "DC143C" } },
         { "ORBIT", new string[] { "ORBIT", "DC143C" } },
         { "Violet On Top", new string[] { "VIOLET", "DC143C" } },
+        { "VioletPaidUser", new string[] { "VIOLETPAID", "DC143C" } },
         { "MonkePhone", new string[] { "MONKEPHONE", "7AA11F" } },
-        { "Body Tracking", new string[] { "BODYTRACK-OLD", "7AA11F" } },
+        { "Body Tracking", new string[] { "BODYTRACKING", "7AA11F" } },
         { "Body Estimation", new string[] { "HANBodyEst", "7AA11F" } },
-        { "Gorilla Track", new string[] { "BODYTRACK", "7AA11F" } },
+        { "GorillaTorsoEstimator", new string[] { "TORSOEst", "7AA11F" } },
+        { "Gorilla Track", new string[] { "gTRACK", "7AA11F" } },
         { "GorillaWatch", new string[] { "GORILLAWATCH", "707070" } },
         { "InfoWatch", new string[] { "INFOWATCH", "707070" } },
         { "BananaPhone", new string[] { "BANANAPHONE", "FFFC45" } },
@@ -247,26 +268,8 @@ namespace TooMuchInfo
             return null;
         }
 
-        static string GetFPS(VRRig rig)
-        {
-            Traverse fps = Traverse.Create(rig).Field("fps");
 
-            if (fps != null)
-                return "FPS " + fps.GetValue().ToString();
-
-            return null;
-        }
-
-        static string GetTaggedPlayer(VRRig rig)
-        {
-            int taggedById = (int)Traverse.Create(rig).Field("taggedById").GetValue();
-            NetPlayer tagger = PhotonNetwork.NetworkingClient.CurrentRoom.GetPlayer(taggedById, false);
-
-            if (tagger != null)
-                return "TAGGED BY " + tagger.NickName;
-
-            return null;
-        }
+        
 
         static string GetPlatform(VRRig rig)
         {
@@ -337,10 +340,23 @@ namespace TooMuchInfo
                 string targetText = "Name";
                 NetPlayer creator = rig.Creator;
 
+
+
                 if (creator != null)
                 {
                     string specialName = GetSpecialPlayerName(rig);
                     string fullName = creator.NickName;
+                    string userId = creator.UserId;
+
+
+                    if (blacklisted.Contains(userId))
+                    {
+                        string blockedText = $"{creator.NickName}\n<color=#964B00>Users Details Blocked</color>";
+
+                        rig.playerText1.text = blockedText;
+                        rig.playerText2.text = Regex.Replace(blockedText, "<.*?>", "");
+                        return;
+                    }
 
                     if (specialName != null)
                     {
@@ -351,7 +367,6 @@ namespace TooMuchInfo
                     List<string> lines = new List<string>();
 
                     
-                        if (modscount != null)
                         if (modscount != null)
                             lines.Add(""); //more space lol
 
@@ -403,12 +418,7 @@ namespace TooMuchInfo
                     string platform = GetPlatform(rig);
                     if (platform != null) lines.Add(platform);
 
-                    int totalCosmetics = CountTotalCosmetics(rig);
-                    if (totalCosmetics > 0)
-                    {
-                        //lines.Add("Cosmetics: " + totalCosmetics.ToString());
-                        //Not accurate anyways and takes up space.
-                    }
+                
 
 
 
