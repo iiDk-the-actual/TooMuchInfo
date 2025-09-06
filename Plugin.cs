@@ -271,7 +271,6 @@ namespace TooMuchInfo
 
                 Regex noRichText = new Regex("<.*?>");
                 rig.playerText1.text = targetText;
-                rig.playerText2.text = noRichText.Replace(targetText, "");
             } catch { }
         }
     }
