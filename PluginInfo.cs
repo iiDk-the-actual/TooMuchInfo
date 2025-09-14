@@ -7,6 +7,6 @@
     {
         public const string GUID = "com.goldentrophy.gorillatag.toomuchinfo";
         public const string Name = "TooMuchInfo";
-        public const string Version = "1.2.0";
+        public const string Version = "1.2.1";
     }
 }
