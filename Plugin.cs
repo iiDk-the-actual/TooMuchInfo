@@ -125,7 +125,8 @@ namespace TooMuchInfo
                 { "CustomMaterial", new string[] { "CUSTOMCOSMETICS", "707070" } },
                 { "I like cheese", new string[] { "RECROOMRIG", "FE8232" } },
                 { "silliness", new string[] { "SILLINESS", "FFBAFF" } },
-                { "emotewheel", new string[] { "EMOTEWHEEL", "1E2030" } }
+                { "emotewheel", new string[] { "EMOTEWHEEL", "1E2030" } },
+                { "untitled", new string[] { "UNTITLED", "2D73AF" } }
             };
 
             Dictionary<string, object> customProps = new Dictionary<string, object>();
